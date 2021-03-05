@@ -15,7 +15,7 @@ class FeaturePresenter
         'all' => 'Active for everyone.',
         'request_param' => 'Active with a request parameter.',
         'percentage' => 'Active via percentage rollout.',
-        'whitelist' => 'Active via group or user whitelist.',
+        'allowlist' => 'Active via group or user allowlist.',
         'disabled' => 'Deactivated globally.'
     ];
 
@@ -69,7 +69,7 @@ class FeaturePresenter
         }
 
         if (count($this->feature->getGroups()) > 0 || count($this->feature->getUsers()) > 0) {
-            return self::$statuses['whitelist'];
+            return self::$statuses['allowlist'];
         }
 
         return self::$statuses['disabled'];
