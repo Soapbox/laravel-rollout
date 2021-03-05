@@ -48,6 +48,7 @@ ROLLOUT_TABLE=rollout
 ### Implementing Interfaces
 
 ##### User
+
 Your rollout users must implement the `\Jaspaul\LaravelRollout\Contracts\User` interface. Often this will be your main user object:
 
 ```php
@@ -68,6 +69,7 @@ class User implements Contract
 ```
 
 #### Group
+
 Your rollout groups must implement the `\Jaspaul\LaravelRollout\Contracts\Group` interface.
 
 ```php
@@ -106,6 +108,7 @@ class BetaUsersGroup implements Group
 and you should update your local `laravel-rollout.php` configuration to include the group in the groups array:
 
 `laravel-rollout.php`
+
 ```php
 return [
     ...
@@ -140,7 +143,7 @@ Swap `{feature}` with the name of the feature you'd like to create a feature fla
 
 `php artisan rollout:deactivate {feature}`
 
-Swap `{feature}` with the name of the feature you'd like to deactivate globally. Note this will also reset the user whitelist.
+Swap `{feature}` with the name of the feature you'd like to deactivate globally. Note this will also reset the user allowlist.
 
 ### Delete
 
