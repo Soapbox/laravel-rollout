@@ -60,34 +60,34 @@ class FeaturePresenterTest extends TestCase
     /**
      * @test
      */
-    public function get_display_status_returns_the_whitelist_message_if_it_is_enabled_for_groups()
+    public function get_display_status_returns_the_allowlist_message_if_it_is_enabled_for_groups()
     {
         $feature = new Feature('name', '0||d');
         $presenter = new FeaturePresenter($feature);
 
-        $this->assertEquals(FeaturePresenter::$statuses['whitelist'], $presenter->getDisplayStatus());
+        $this->assertEquals(FeaturePresenter::$statuses['allowlist'], $presenter->getDisplayStatus());
     }
 
     /**
      * @test
      */
-    public function get_display_status_returns_the_whitelist_message_if_it_is_enabled_for_users()
+    public function get_display_status_returns_the_allowlist_message_if_it_is_enabled_for_users()
     {
         $feature = new Feature('name', '0|a|');
         $presenter = new FeaturePresenter($feature);
 
-        $this->assertEquals(FeaturePresenter::$statuses['whitelist'], $presenter->getDisplayStatus());
+        $this->assertEquals(FeaturePresenter::$statuses['allowlist'], $presenter->getDisplayStatus());
     }
 
     /**
      * @test
      */
-    public function get_display_status_returns_the_whitelist_message_if_it_is_enabled_for_users_and_groups()
+    public function get_display_status_returns_the_allowlist_message_if_it_is_enabled_for_users_and_groups()
     {
         $feature = new Feature('name', '0|a|d');
         $presenter = new FeaturePresenter($feature);
 
-        $this->assertEquals(FeaturePresenter::$statuses['whitelist'], $presenter->getDisplayStatus());
+        $this->assertEquals(FeaturePresenter::$statuses['allowlist'], $presenter->getDisplayStatus());
     }
 
     /**
